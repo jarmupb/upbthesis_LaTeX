@@ -278,7 +278,7 @@
     \vfill
     {\bfseries
     	\begin{tabular}[t]{c}%
-      	Advisors \\
+      	\if@english Advisor(s) \else Director(es) \fi \\
         \@director
       \end{tabular}}
     \vfill
