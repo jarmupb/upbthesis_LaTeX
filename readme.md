@@ -1,6 +1,6 @@
 # LaTeX templates for writing theses at Universidad Pontificia Bolivariana
 
-This repository contains LaTeX classes (.cls) for writing your thesis at UPB. The file you require is *upbthesis.cls*
+This repository contains LaTeX classes (.cls) for writing your thesis at UPB. The file you require is **upbthesis.cls**
 
 There are two main versions:
 - v1: that organizes the thesis by sections, as it is usually done in, e.g., articles. I consider this version legacy, because I don't have intend to further improve it.
