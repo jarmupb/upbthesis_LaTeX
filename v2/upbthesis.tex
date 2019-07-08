@@ -1,0 +1,154 @@
+\documentclass[11pt,oneside,onehalfspace]{upbthesis}
+% Opciones de plantilla:
+% Tamaño de fuente: 10pt, 11pt, 12pt
+% Un lado ó dos lados: oneside, twoside
+% Ajustes de márgen para impresión: print
+% Espaciado de líneas: singlespace, onehalfspace, doublespace
+% Inglés ó español: english, spanish
+% Tipo de letra Sans Serif: sserif
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[usenames,dvipsnames]{color}
+% Configuración de hipervínculos en .pdf
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+						linkcolor=black,
+						linktoc=all,
+						citecolor=black,
+						pdftitle={Redacción de Tesis y Trabajos de Grado usando LaTeX en el formato de la Universidad Pontificia Bolivariana},
+						pdfauthor={Juan Alberto Ramírez Macías},
+						pdfcreator={Juan Alberto Ramírez Macías}}
+						
+\hyphenation{de-di-ca-to-ria pre-li-mi-na-res re-fe-ren-ciar}
+
+% Información del documento requerida en las portadas y página de aprobación
+\title{REDACCIÓN DE TESIS Y TRABAJOS DE GRADO EN \LaTeXe{} USANDO EL FORMATO DE LA UNIVERSIDAD PONTIFICIA BOLIVARIANA}
+\author{Juan Alberto Ramírez Macías} %
+\school{ESCUELA DE INGENIERÍAS}
+\faculty{MAESTRÍA EN INGENIERÍA}
+\address{Medellín} % Escribir en minúsculas con mayúscula inicial
+\degree{Trabajo de grado para optar al título de Magíster en Ingeniería}
+\director{Rafael Esteban Vásquez\\Doctor of Philosophy}
+
+\begin{document}
+% Inicio de los preliminares del texto
+\frontmatter
+% Portadas 1 y 2
+\maketitle
+% Página de aprobación
+% La página de aprobación era usual cuando los trabajos de grado se entregaban de manera impresa
+% \approvalpage
+
+% Declaración de originalidad
+\originality
+%
+% Dedicatoria
+\begin{dedication}
+[Escriba acá la dedicatoria].
+\end{dedication}
+%
+% Agradecimientos
+\begin{acknowledgements}
+[Escriba acá los agradecimientos].
+\end{acknowledgements}
+
+% Resumen
+\begin{resumen}
+Este documento explica el uso de la plantilla {\tt upbthesis.cls}, diseñada para la redacción de tesis y trabajos de grado en \LaTeXe{} usando un formato experimental para la {\bf Universidad Pontificia Bolivariana}. El documento pretende concentrarse en los elementos particulares de la plantilla y asume que el lector está familiarizado con el uso de \LaTeX. Asimismo, las explicaciones se limitan a los elementos básicos de edición que cubren la redacción de un texto básico. La edición avanzada requerirá que el lector busque fuentes de información especializadas.
+\end{resumen}
+%
+% Palabras clave
+\begin{pclave}
+\LaTeX; TUTORIAL PARA REDACCIÓN DE TRABAJOS DE GRADO.
+\end{pclave}
+%
+\begin{abstract}
+Abstract text
+\end{abstract}
+%
+\begin{keywords}
+The keywords
+\end{keywords}
+%
+% Tabla de contenido
+\tableofcontents
+% Lista de figuras
+\listoffigures
+% Lista de Tablas
+\listoftables
+%
+% Glosario
+\begin{gloss}
+PALABRA 1: Sinónimo.
+
+PALABRA 2: Sinónimo.
+\end{gloss}
+%
+
+\mainmatter
+%
+\chapter*{Introducción}
+Esta plantilla {\tt upbthesis.cls} está diseñada para la redacción de tesis y trabajos de grado en \LaTeXe, usando un formato experimental para la {\bf Universidad Pontificia Bolivariana}\footnote{Esta plantilla ha sido creada por el docente de la Facultad de Ingeniería Mecánica {\it Juan Alberto Ra\-mí\-rez Ma\-cí\-as}. Universidad Pontificia Bolivariana, Escuela de Ingenierías, Facultad de Ingeniería Mecánica. Circular~1 No.~70-01 Bl.~11. Tel:~+57(4)~4488388 Ext.~14096. Correo electrónico: {\color{blue}\tt juan.ramirez@upb.edu.co.}}. Se supone que, de antemano, el usuario de la plantilla está familiarizado con la redacción de textos usando \LaTeX{}. Mayor información acerca del funcionamiento de \LaTeX{} puede encontrarse en diferentes fuentes. Para los principiantes es recomendable que consulten en {\it The Not So Short Introduction to \LaTeXe} de Tobias Oetiker et~al.\ \cite{oetiker2010} ó en la página web de \LaTeX{} en WikiBooks.org (\url{http://en.wikibooks.org/wiki/LaTeX}) \cite{wikibooks}. Para usuarios más avanzados se puede hacer referencia al texto de Leslie Lamport, creador de \LaTeX{}, {\it \LaTeX{} A Document Preparation System} \cite{lamport1994}. Y, para los usuarios expertos que desean conocer aspectos más profundos, incluso la creación de nuevas plantillas, se recomienda {\it The \LaTeX{} Companion} de Frank Mittelback y Michel Goosens \cite{goosens2004}.
+
+La versión de la plantilla {\tt upbthesis.cls} es {\tt v2.0 (beta)}, aún está en proceso de creación y no contiene todas las funcionalidades esperadas de una plantilla convencional. Sin embargo se puede esperar que los elementos básicos necesarios estén definidos:
+\begin{itemize}
+\item Creación de los preliminares del texto: las portadas, página de aprobación, dedicatoria, agradecimientos, tablas de contenido, listas de tablas, listas de figuras, glosario, resumen y palabras clave.
+\item Seccionamiento en partes, capítulos y subsecciones.
+\item Creación de listas numeradas y listas con viñetas hasta un nivel 4 de indentación.
+\item Creación de tablas y figuras como objetos flotantes y herramientas asociadas para las referencias cruzadas.
+\item Creación de ecuaciones en línea con el texto, en línea aparte con numeración y en línea aparte sin numeración.
+\item Creación de notas al pie.
+\item Definición de bibliografías estándar en formatos Vancouver e Icontec. Otras normas de referenciación (APA, IEEE, etc.) son accesibles a través de BibTeX.
+\item Posibilidades para impresión a una cara o a dos caras de la hoja.
+\item Posibilidades para selección de fuentes serif (roman) y {\sf sans serif}.
+\item Posibilidades para cambio del tamaño de fuente general entre los tamaños 10pt, 11pt y 12pt.
+\item Posibilidades para el cambio del interlineado entre sencillo, espacio y medio y doble espacio.
+\item Posibilidad para la creación del texto .pdf con hipervínculos a través del paquete {\tt hyperref}.
+\end{itemize}
+
+
+%
+\chapter{Nombre capítulo 1}
+
+Texto del capítulo 1
+%
+
+\section{Sección 1}
+Texto de la sección 1
+
+\section{Sección 2}
+Texto de la sección 2
+%
+
+%
+\chapter{Nombre capítulo 2}
+
+Texto del capítulo 2
+%
+
+\section{Sección 1}
+Texto de la sección 1
+
+\section{Sección 2}
+Texto de la sección 2
+
+%
+\chapter*{Conclusiones}
+La plantilla {\tt upbthesis.cls} permite la redacción de Tesis y Trabajos de Grado en \LaTeXe{} usando las normas de estilo experimentales para la Universidad Pontificia Bolivariana. Esta plantilla contiene las reglas de forma necesarias para que un usuario de \LaTeX{} redacte su Tesis o Trabajo de Grado con una excelente calidad tipográfica sin preocuparse por el estilo.
+
+Este documento presenta la primera versión de la plantilla. Ésta cumple con las condiciones mínimas para redacción completa de una Tesis o Trabajo de Grado. Sin embargo la plantilla se considera como un trabajo en progreso susceptible de mejorar en el tiempo.
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{upbthesis}
+%
+%\begin{thebibliography}{99}
+%\bibitem{apkarian1995} APKARIAN, Pierre; GAHINET, Pascal and BECKER, Greg. Self-scheduled ${\cal H}_\infty$ control of linear parameter-varying systems: a design example. \underline{In}: Automatica. Vol. 31, No. 9 (Sep. 1995); p. 1251 - 1261.
+%\bibitem{astrom2008} ÅSTRÖM, Karl and MURRAY, Richard. Feedback systems: an introduction for scientists and engineers. Princeton, NJ: Princeton University Press, 2008. p. 27.
+%\bibitem{gutierrez2004} GUTIERREZ, Luis Benigno. Adaptive mode transition control architecture with an application to unmanned aerial vehicles. Atlanta, GA; 2004. Thesis (PhD in Electrical and Computer Engineering). Georgia Institute of Technology. School of Electrical and Computer Engineering.
+%\end{thebibliography}
+
+%
+\end{document}

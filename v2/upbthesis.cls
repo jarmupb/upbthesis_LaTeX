@@ -641,7 +641,7 @@
                {}
 % Resumen environment
 \newenvironment{resumen}
-               {\section*{Resumen}}
+               {\if@openright\cleardoublepage\else\clearpage\fi \chapter*{Resumen \phantomsection\addcontentsline{toc}{chapter}{\protect Resumen}}}
                {}
 % Abstract environment
 \newenvironment{abstract}
