@@ -1,4 +1,4 @@
-\documentclass[12pt,twoside,onehalfspace]{upbthesis}
+\documentclass[12pt,oneside,onehalfspace]{upbthesis}
 % Opciones de plantilla:
 % Tamaño de fuente: 10pt, 11pt, 12pt
 % Un lado ó dos lados: oneside, twoside
@@ -30,7 +30,7 @@
 \faculty{MAESTRÍA EN INGENIERÍA}
 \address{Medellín} % Escribir en minúsculas con mayúscula inicial
 \degree{Trabajo de grado para optar al título de Magíster en Ingeniería}
-\director{Rafael Esteban Vásquez\\Doctor of Philosophy}
+\director{Raúl A.~Valencia, Ph.D.}
 
 \begin{document}
 % Inicio de los preliminares del texto
@@ -81,10 +81,14 @@ Este documento explica el uso de la plantilla {\tt upbthesis.cls}, diseñada para
 %
 \mainmatter
 %
-\begin{introduction}
-La plantilla {\tt upbthesis.cls} está diseñada para la redacción de tesis y trabajos de grado en \LaTeXe, usando el formato de tesis y trabajos de grado aprobado por el Sistema de Bibliotecas de la {\bf Universidad Pontificia Bolivariana}\footnote{Esta plantilla ha sido creada por el docente de la Facultad de Ingeniería Mecánica {\it Juan Alberto Ra\-mí\-rez Ma\-cí\-as}. Universidad Pontificia Bolivariana, Escuela de Ingenierías, Facultad de Ingeniería Mecánica. Circular~1 No.~70-01 Bl.~11. Tel:~+57(4)~4488388 Ext.~14096. Correo electrónico: {\color{blue}\tt juan.ramirez@upb.edu.co.}}. Se supone que, de antemano, el usuario de la plantilla está familiarizado con la redacción de textos usando \LaTeX{}. Mayor información acerca del funcionamiento de \LaTeX{} puede encontrarse en diferentes fuentes. Para los principiantes es recomendable que consulten en {\it The Not So Short Introduction to \LaTeXe} de Tobias Oetiker et~al.\ \cite{oetiker2010} ó en la página web de \LaTeX{} en WikiBooks.org (\url{http://en.wikibooks.org/wiki/LaTeX}) \cite{wikibooks}. Para usuarios más avanzados se puede hacer referencia al texto de Leslie Lamport, creador de \LaTeX{}, {\it \LaTeX{} A Document Preparation System} \cite{lamport1994}. Y, para los usuarios expertos que desean conocer aspectos más profundos, incluso la creación de nuevas plantillas, se recomienda {\it The \LaTeX{} Companion} de Frank Mittelback y Michel Goosens \cite{goosens2004}.
+% También está la posibilidad de definir la introducción como una sección:
+% \section*{Introducción}
 
-La versión de la plantilla {\tt upbthesis.cls} es {\tt v1.2 (beta)}, aún está en proceso de creación y no contiene todas las funcionalidades esperadas de una plantilla convencional. Sin embargo se puede esperar que los elementos básicos necesarios estén definidos:
+% Definición de la Introducción como ``environment''
+\begin{introduction}
+La plantilla {\tt upbthesis.cls} está diseñada para la redacción de tesis y trabajos de grado en \LaTeXe, usando el formato de tesis y trabajos de grado aprobado por el Sistema de Bibliotecas de la {\bf Universidad Pontificia Bolivariana}\footnote{Esta plantilla ha sido creada por el docente de la Facultad de Ingeniería Mecánica {\it Juan Alberto Ra\-mí\-rez Ma\-cí\-as}. Universidad Pontificia Bolivariana, Escuela de Ingenierías, Facultad de Ingeniería Mecánica. Circular~1 No.~70-01 Bl.~11. Correo electrónico: {\color{blue}\tt juan.ramirez@upb.edu.co.}}. Se supone que, de antemano, el usuario de la plantilla está familiarizado con la redacción de textos usando \LaTeX{}. Mayor información acerca del funcionamiento de \LaTeX{} puede encontrarse en diferentes fuentes. Para los principiantes es recomendable que consulten en {\it The Not So Short Introduction to \LaTeXe} de Tobias Oetiker et~al.\ \cite{oetiker2010} ó en la página web de \LaTeX{} en WikiBooks.org (\url{http://en.wikibooks.org/wiki/LaTeX}) \cite{wikibooks}. Para usuarios más avanzados se puede hacer referencia al texto de Leslie Lamport, creador de \LaTeX{}, {\it \LaTeX{} A Document Preparation System} \cite{lamport1994}. Y, para los usuarios expertos que desean conocer aspectos más profundos, incluso la creación de nuevas plantillas, se recomienda {\it The \LaTeX{} Companion} de Frank Mittelback y Michel Goosens \cite{goosens2004}.
+
+La versión de la plantilla {\tt upbthesis.cls} es {\tt v1.6 (beta)}, aún está en proceso de creación y no contiene todas las funcionalidades esperadas de una plantilla convencional. Sin embargo se puede esperar que los elementos básicos necesarios estén definidos:
 \begin{itemize}
 \item Creación de los preliminares del texto: las portadas, página de aprobación, dedicatoria, agradecimientos, tablas de contenido, listas de tablas, listas de figuras, glosario, resumen y palabras clave.
 \item Seccionamiento en capítulos y subsecciones en niveles del 1 al 4.
