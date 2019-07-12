@@ -28,7 +28,7 @@
 % * http://en.wikibooks.org/wiki/LaTeX
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{upbthesis}[2016/04/25 v1.5 UPB LaTeX Thesis class]
+\ProvidesClass{upbthesis}[2016/04/25 v1.6 UPB LaTeX Thesis class]
 %\newcommand\@ptsize{}
 %\newif\if@restonecol
 %\newif\if@titlepage
@@ -176,22 +176,18 @@
 \setcounter{tocdepth}{4}
 % Sectioning definitions
 \setcounter{secnumdepth}{4}
-\newcounter{part}
-\newcounter{chapter}
-\newcounter{section}[chapter]
+\newcounter{section}
 \newcounter{subsection}[section]
 \newcounter{subsubsection}[subsection]
 \newcounter{paragraph}[subsubsection]
-%\newcounter{subparagraph}[paragraph]
+\newcounter{subparagraph}[paragraph]
 % Appendix name
 \newcommand\appname{ANEXOS}
 \if@english
 \renewcommand\appname{APPENDIX}
 \fi
 % Sections
-\renewcommand\thepart{\Roman{part}}
-\renewcommand\thechapter{\arabic{chapter}}
-\renewcommand\thesection{\thechapter.\arabic{section}}
+\renewcommand\thesection{\arabic{section}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
 \renewcommand\theparagraph{\thesubsubsection.\arabic{paragraph}}
