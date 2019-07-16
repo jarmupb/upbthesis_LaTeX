@@ -1,0 +1,596 @@
+\documentclass[11pt,oneside,onehalfspace]{upbthesis}
+% Opciones de plantilla:
+% Tamaño de fuente: 10pt, 11pt, 12pt
+% Un lado ó dos lados: oneside, twoside
+% Ajustes de márgen para impresión: print
+% Espaciado de líneas: singlespace, onehalfspace, doublespace
+% Inglés ó español: english, spanish
+% Tipo de letra Sans Serif: sserif
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[usenames,dvipsnames]{color}
+% Configuración de hipervínculos en .pdf
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+						linkcolor=black,
+						linktoc=all,
+						citecolor=black,
+						pdftitle={Redacción de Tesis y Trabajos de Grado usando LaTeX en el formato de la Universidad Pontificia Bolivariana},
+						pdfauthor={Juan Alberto Ramírez Macías},
+						pdfcreator={Juan Alberto Ramírez Macías}}
+						
+\hyphenation{de-di-ca-to-ria pre-li-mi-na-res re-fe-ren-ciar}
+
+% Información del documento requerida en las portadas y página de aprobación
+\title{REDACCIÓN DE TESIS Y TRABAJOS DE GRADO EN \LaTeXe{} USANDO EL FORMATO DE LA UNIVERSIDAD PONTIFICIA BOLIVARIANA}
+\author{Juan Alberto Ramírez Macías} %
+\school{ESCUELA DE INGENIERÍAS}
+\faculty{MAESTRÍA EN INGENIERÍA}
+\address{Medellín} % Escribir en minúsculas con mayúscula inicial
+\degree{Trabajo de grado para optar al título de Magíster en Ingeniería}
+\director{Raúl A. Valencia, Ph.D.}
+
+\begin{document}
+% Inicio de los preliminares del texto
+\frontmatter
+% Portadas 1 y 2
+\maketitle
+% Página de aprobación
+% La página de aprobación era usual cuando los trabajos de grado se entregaban de manera impresa
+% \approvalpage
+
+% Declaración de originalidad
+%\originality
+%
+% Dedicatoria
+%\begin{dedication}
+%[Escriba acá la dedicatoria].
+%\end{dedication}
+%
+% Agradecimientos
+%\begin{acknowledgements}
+%[Escriba acá los agradecimientos].
+%\end{acknowledgements}
+
+% Resumen
+\begin{resumen}
+Este documento explica el uso de la plantilla {\tt upbthesis.cls}, versión 2.0, diseñada para la redacción de tesis y trabajos de grado en \LaTeXe{} usando un formato experimental para la \emph{Universidad Pontificia Bolivariana}. La versión 2 está basada en la versión 1, que contiene el formato oficial de la biblioteca. Sin embargo, esta versión incluye la división del documento en capítulos y partes, lo que le da una apariencia de libro. Este documento explicativo se concentra en los elementos particulares de la plantilla y asume que el lector está familiarizado con el uso de \LaTeX. Asimismo, las explicaciones se limitan a los elementos básicos de edición que cubren la redacción de un texto básico. La edición avanzada requerirá que el lector busque fuentes de información especializadas.
+\end{resumen}
+%
+% Palabras clave
+\begin{pclave}
+\LaTeX; TUTORIAL PARA REDACCIÓN DE TRABAJOS DE GRADO.
+\end{pclave}
+%
+%\begin{abstract}
+%Abstract text
+%\end{abstract}
+%%
+%\begin{keywords}
+%The keywords
+%\end{keywords}
+%
+% Tabla de contenido
+\tableofcontents
+% Lista de figuras
+%\listoffigures
+% Lista de Tablas
+%\listoftables
+%
+% Glosario
+%\begin{gloss}
+%PALABRA 1: Sinónimo.
+%
+%PALABRA 2: Sinónimo.
+%\end{gloss}
+%
+
+\mainmatter
+%
+\chapter{Introducción}
+
+\section{Acerca de la clase}
+
+Esta clase {\tt upbthesis.cls} está diseñada para la redacción de tesis y trabajos de grado en \LaTeXe. La versión 2.0 corresponde a un formato experimental basado en las normas de la biblioteca de la \emph{Universidad Pontificia Bolivariana}\footnote{Esta plantilla ha sido creada por el docente de la Facultad de Ingeniería Mecánica {\it Juan Alberto Ra\-mí\-rez Ma\-cí\-as}. Universidad Pontificia Bolivariana, Escuela de Ingenierías, Facultad de Ingeniería Mecánica. Circular~1 No.~70-01 Bl.~11. Correo electrónico: {\color{blue}\tt juan.ramirez@upb.edu.co.}}. La versión 2.0 está basada en la versión 1.6, que contiene el formato oficial de la biblioteca (\url{https://bibliotecas.upb.edu.co/})\footnote{Ver \url{https://bibliotecas.upb.edu.co/index.php/servicios/entrega-de-trabajos-de-grado}}. La versión 2.0 incluye la división del documento en capítulos y partes, a comparación de la versión 1.6 que divide el documento en secciones. De este modo, el documento de tesis tiene apariencia de libro.
+
+Para este manual se supone que, de antemano, el usuario de la plantilla está familiarizado con la redacción de textos usando \LaTeX{}. Mayor información acerca del funcionamiento de \LaTeX{} puede encontrarse en diferentes fuentes. Para los principiantes es recomendable que consulten en {\it The Not So Short Introduction to \LaTeXe} de Tobias Oetiker et~al.\ \cite{oetiker2010} ó en la página web de \LaTeX{} en WikiBooks.org (\url{http://en.wikibooks.org/wiki/LaTeX}) \cite{wikibooks}. Para usuarios más avanzados se puede hacer referencia al texto de Leslie Lamport, creador de \LaTeX{}, {\it \LaTeX{} A Document Preparation System} \cite{lamport1994}. Y, para los usuarios expertos que desean conocer aspectos más profundos, incluso la creación de nuevas plantillas, se recomienda {\it The \LaTeX{} Companion} de Frank Mittelback y Michel Goosens \cite{goosens2004}.
+
+La versión de la plantilla {\tt upbthesis.cls} es {\tt v2.0 (beta)}, aún está en proceso de creación y no contiene todas las funcionalidades esperadas de una plantilla convencional. Sin embargo se puede esperar que los elementos básicos necesarios estén definidos:
+\begin{itemize}
+\item Creación de los preliminares del texto: las portadas, página de aprobación, dedicatoria, agradecimientos, tablas de contenido, listas de tablas, listas de figuras, glosario, resumen y palabras clave.
+\item Seccionamiento en partes, capítulos y subsecciones.
+\item Creación de listas numeradas y listas con viñetas hasta un nivel 4 de indentación.
+\item Creación de tablas y figuras como objetos flotantes y herramientas asociadas para las referencias cruzadas.
+\item Creación de ecuaciones en línea con el texto, en línea aparte con numeración y en línea aparte sin numeración.
+\item Creación de notas al pie.
+\item Definición de bibliografías estándar en formatos Vancouver e Icontec. Otras normas de referenciación (APA, IEEE, etc.) son accesibles a través de BibTeX.
+\item Posibilidades para impresión a una cara o a dos caras de la hoja.
+\item Posibilidades para selección de fuentes serif (roman) y {\sf sans serif}.
+\item Posibilidades para cambio del tamaño de fuente general entre los tamaños 10pt, 11pt y 12pt.
+\item Posibilidades para el cambio del interlineado entre sencillo, espacio y medio y doble espacio.
+\item Posibilidad para la creación del texto .pdf con hipervínculos a través del paquete {\tt hyperref}.
+\end{itemize}
+
+
+\section{Información técnica}
+\subsection{Análisis}
+
+\LaTeXe{} es un programa para la redacción de textos que toma un archivo fuente en texto plano y lo convierte en un documento imprimible o visible en pantalla de alta calidad tipográfica ({\it e.g.} archivo {\tt .pdf}). El documento en texto plano usa lenguaje \TeX{}; de este modo, \LaTeXe{} es un conjunto de macros en el lenguaje \TeX{}. El método de trabajo de \LaTeX{} se suele llamar WYSIWYM (\emph{What you see is what you mean}, lo que ves es lo que lo que quieres decir), donde el entorno de trabajo del usuario no muestra directamente el texto tal como saldría de una impresora. Este estilo es el opuesto a procesadores de texto como Word, cuya modalidad es WYSIWYG (\emph{What you see is what you get}, lo que ves es lo que lo que obtienes).
+
+La redacción de textos en \LaTeXe{} requiere que el usuario escriba un documento fuente {\tt .tex} y requiere que tenga a la mano un documento de clase (class) {\tt .cls}. En el documento {\tt .tex} se escribe el contenido del texto y el archivo de clase {\tt .cls} contiene comandos que declaran los aspectos de forma del documento. Para el estilo de trabajo en \LaTeXe, quien redacta el documento {\tt .tex} es el \emph{usuario} y quien escribe la clase {\tt .cls} es el \emph{desarrollador}.
+
+La clase {\tt upbthesis.cls} es código que contiene las instrucciones de forma para que cuando el documento fuente {\tt .tex} sea compilado por el usuario produzca un documento apto para ser presentado como monografía de tesis o trabajo de grado en la Universidad Pontificia Bolivariana. Esta clase se elabora con una especificación de requisitos del software (SRS) dada por:
+\begin{itemize}
+\item Comandos para la creación de las secciones preliminares del texto, tales como las portadas, página de aprobación, dedicatoria, agradecimientos, tablas de contenido, listas de tablas, listas de figuras, glosario, resumen y palabras clave.
+\item Comandos para el seccionamiento del documento en partes, capítulos, secciones y subsecciones.
+\item Comandos para la creación de listas numeradas y listas con viñetas hasta un nivel 4 de indentación.
+\item Comandos para la inserción de objetos flotantes como tablas y figuras, así como su compatibilidad con comandos para la elaboración de referencias cruzadas. Para los objetos flotantes, la clase debe suministrar el conteo de ellos reiniciando en cada capítulo.
+\item Compatibilidad con comandos para la creación de ecuaciones en línea con el texto, en línea aparte con numeración y en línea aparte sin numeración. Para el caso de los comandos para la creación de ecuaciones en línea aparte con numeración la clase debe suministrar el conteo de ecuaciones reiniciando en cada capítulo.
+\item Comando para la creación de notas al pie.
+\item Comandos para la definición de bibliografías estándar en formatos Vancouver e Icontec. Otras normas de referenciación (APA, IEEE, etc.) son accesibles a través de BibTeX.
+\item El suministro de opciones con las siguientes posibilidades:
+\begin{itemize}
+	\item Posibilidades para impresión a una cara o a dos caras de la hoja.
+	\item Posibilidades para selección de fuentes serif (roman) y {\sf sans serif}.
+	\item Posibilidades para cambio del tamaño de fuente general entre los tamaños 10pt, 11pt y 12pt.
+	\item Posibilidades para el cambio del interlineado entre sencillo, espacio y medio y doble espacio.
+	\item Posibilidades para la redacción del documento en inglés o español.
+\end{itemize}
+\item Compatibilidad para la creación del texto .pdf con hipervínculos a través del paquete {\tt hyperref}.
+\end{itemize}
+
+
+\subsection{Diseño}
+
+El código de la clase {\tt upbthesis.cls} declara las particulades de forma del documento usando comandos estándar y comandos particulares para esta plantilla. Según las especificación de requisitos de software, los comandos se desarrollan en el código en el siguiente orden:
+\begin{itemize}
+\item Declaración de la clase y versión.
+\item Declaración de condicionales.
+\item Declaración de opciones de clase: 10pt, 11pt, 12pt, oneside, twoside, print, singlespace, onehalfspace, doublespace, openright, openany, sserif, numcit, icontec, english, spanish.
+\item Declaración de paquetes por defecto: inputenc [latin1] y multicol.
+\item Declaración de márgenes y espacios del texto.
+\item Declaración de numeración.
+\item Definición de los tamaños de fuente base: 10pt, 11pt, 12pt.
+\item Definición de comandos para los preliminares del texto, tales como las portadas, página de aprobación, dedicatoria, agradecimientos, tablas de contenido, listas de tablas, listas de figuras, glosario, resumen y palabras clave.
+\item Definición de comandos para el seccionamiento del documento en partes, capítulos, secciones y subsecciones y su correspondientes comandos para la inclusión en la tabla de contenidos.
+\item Definición de comandos para la creación de listas numeradas y listas con viñetas hasta un nivel 4 de indentación.
+\item Definición de los entornos (environments) para la inserción de objetos flotantes como tablas y figuras y de ecuaciones, así como su compatibilidad con comandos para la elaboración de referencias cruzadas. Para los objetos flotantes, la clase debe efectúa el conteo de ellos reiniciando en cada capítulo.
+\item Definición de entornos: dedication, acknowledgements, gloss, resumen, abstract, pclave, keywords, introduction, conclusions, recommendations.
+\item Definición de comandos de seccionamiento general del documento: frontmatter, mainmatter, backmatter.
+\item Definición de tablas de contenido, figuras y tablas.
+\item Definición de bibliografías manuales con el entorno thebibliography.
+\item Declaración de nombres de secciones importantes en español e inglés.
+\end{itemize}
+
+
+\subsection{Implementación}
+La implementación del texto fuente de la clase {\tt upbthesis.cls} se llevó a cabo usando los editores TexnicCenter 2.02 y Notepad++ v7.7. Los comandos usan lenguaje \TeX{}, se declaran macros usando nombres estándar y nombres particulares para la plantilla. La clase se basa en el formato {\tt book.cls} y es complementada con la documentación disponible en F. Mittelback and M. Goosens, The LATEX Companion, 2nd ed~\cite{goosens2004}.
+
+
+\subsection{Validación}
+Se verifica que la clase {\tt upbthesis.cls} cumple con las especificaciones planteadas. La validación se lleva a cabo en Windows 8.1 Pro, usando la distribución de \LaTeXe{} MikTeX 2.9, creando un documento fuente {\tt .tex} que contiene las funcionalidades básicas de la clase. Para la creación del documento de prueba se escribe usando TexnicCenter 2.02 como interfaz de usuario y allí se compila el documento final usando el perfil \verb.LaTeX=>PDF., que hace interfaz con el ejecutable {\tt pdflatex.exe}. El documento de prueba fue satisfactorio. 
+
+\subsection{Plataforma}
+\TeX{}
+
+\subsection{Ambiente}
+Las clases {\tt .cls} son instrucciones de software compatibles con Windows, Unix, Mac.
+
+%
+\chapter{Elementos básicos}
+
+La plantilla se declara con el comando:
+%
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}documentclass[opciones]\{upbthesis\}\\\hline
+\end{tabular}\,.
+\end{center}
+%
+En la versión actual, la plantilla únicamente se define para hojas tamaño carta ($11'' \times 8.5''$). Adicionalmente permite el uso de las siguientes {\tt opciones}:
+%
+\begin{itemize}
+\item tamaños de letra a 10pt, 11pt ó 12pt: {\tt 10pt}, {\tt 11pt}, {\tt 12pt};
+\item espacio sencillo, espacio doble o espacio y medio: {\tt singlespace}, {\tt doublespace}, {\tt onehalfspace};
+\item disposición páginas para visualización a una cara o por dos caras: {\tt oneside}, {\tt twoside};
+\item disposición de márgenes para impresión: {\tt print}; y
+\item letra tipo roman (se asume por defecto) o tipo {\sf sans serif} (se usa la opción {\tt sserif}).
+\end{itemize}
+%
+Una posibilidad para la declaración inicial es:
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}documentclass[11pt,oneside,onehalfspace]\{upbthesis\}\\\hline
+\end{tabular}\,,
+\end{center}
+%
+donde se declara tipo de letra roman a 11pt, espacio sencillo y márgenes para impresión a una cara. La opción por defecto, cuando se declara \verb|\documentclass{upbthesis}| únicamente, es equivalente a declarar
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}documentclass[12pt,twoside,onehalfspace,openright]\{upbthesis\}\\\hline
+\end{tabular}\,,
+\end{center}
+
+La plantilla usa internamente el paquete {\tt inputenc.sty} con la opción {\tt latin1}. Esto es equivalente a insertar el paquete
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}usepackage[latin1]\{inputenc\}\\\hline
+\end{tabular}\,;
+\end{center}
+de modo que es capaz de soportar caracteres propios del Castellano tales como: á, é, í, ó, ü y ñ.
+Después de la declaración de la plantilla y la inserción de paquetes, el inicio del documento se declara con {\tt \textbackslash{}begin\{document\}} y el final con {\tt \textbackslash{}end\{document\}}.
+
+\section{Preliminares}
+Los preliminares están conformados por las portadas, la página de aprobación, la dedicatoria, los agradecimientos, la tablas de contenido, la lista de tablas, la lista de figuras, el glosario, el resumen y las palabras clave. El inicio de los preliminares se define con el comando {\tt \textbackslash{}frontmatter}. Las páginas de la portada se definen con el comando {\tt \textbackslash{}maketitle}, el cual requiere de la definición previa de los comandos que declaran la información de título del trabajo, autor(es), facultad, escuela, etc. Los comandos requeridos son:
+\begin{itemize}\tt
+\item \textbackslash{}title\{Título\}
+\item \textbackslash{}author\{Autor 1\textbackslash{}\textbackslash{}Autor 2\}%
+\item \textbackslash{}school\{Escuela de ...\}
+\item \textbackslash{}faculty\{Facultad de ...\}
+\item \textbackslash{}address\{Medellín\}
+\item \textbackslash{}degree\{Trabajo de grado para optar al título de ...\}
+\item \textbackslash{}director\{Nombre del Director\textbackslash{}\textbackslash{}Título del director\}
+\end{itemize}
+%
+La página de aprobación se define con el comando {\tt \textbackslash{}approvalpage}. La dedicatoria se define entre {\tt \textbackslash{}begin\{dedication\}} y {\tt \textbackslash{}end\{dedication\}}. Los agradecimientos se definen entre {\tt \textbackslash{}begin\{acknowledgements\}} y {\tt \textbackslash{}end\{acknowledgements\}}. La tabla de contenido, la lista de figuras y la lista de tablas se crean automáticamente declarando los comandos
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}tableofcontents\\
+\textbackslash{}listoffigures\\
+\textbackslash{}listoftables\\\hline
+\end{tabular}\,.
+\end{center}
+
+El glosario se define entre {\tt \textbackslash{}begin\{gloss\}} y {\tt \textbackslash{}end\{gloss\}}. El resumen se define entre {\tt \textbackslash{}begin\{abstract\}} y {\tt \textbackslash{}end\{abstract\}}. Y, finalmente, las palabras clave se definen entre {\tt \textbackslash{}begin\{keywords\}} y {\tt \textbackslash{}end\{keywords\}}.
+Un ejemplo de cómo declarar los preliminares dentro del archivo {\tt .tex} se muestra a continuación.
+%
+
+\begin{center}\tt\footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+ \textbackslash{}documentclass[12pt,oneside,onehalfspace]\{upbthesis\}\\\\
+ \textbackslash{}title\{REDACCIÓN DE TESIS Y TRABAJOS DE GRADO EN \textbackslash{}LaTeXe\{\} ...\}\\
+ \textbackslash{}author\{JUAN ALBERTO RAMÍREZ MACÍAS\textbackslash{}\textbackslash{}MARISOL OSORIO CÁRDENAS\}\\ %
+ \textbackslash{}school\{ESCUELA DE INGENIERÍAS\}\\
+ \textbackslash{}faculty\{MAESTRÍA EN \textbackslash{}LaTeX\}\\
+ \textbackslash{}address\{Medellín\} \% En minúsculas con mayúscula inicial\\
+ \textbackslash{}degree\{Trabajo de grado para optar al título de Magíster en \textbackslash{}LaTeX\}\\
+ \textbackslash{}director\{Marisol Osorio Cárdenas\textbackslash{}\textbackslash{}Doctora en Ingeniería\}\\
+ \\
+ \textbackslash{}begin\{document\}\\
+ \\
+ \textbackslash{}frontmatter\\
+ \textbackslash{}maketitle\\
+ \textbackslash{}approvalpage\\
+	\\
+	% Dedicatoria\\
+	\textbackslash{}begin\{dedication\}\\
+		A mis padres.\\
+	\textbackslash{}end\{dedication\}\\\\
+	% Agradecimientos \\
+	\textbackslash{}begin\{acknowledgements\}\\
+	Agradezco a ...\\
+	\textbackslash{}end\{acknowledgements\}\\\\
+
+	\textbackslash{}tableofcontents\\
+	\textbackslash{}listoffigures\\
+	\textbackslash{}listoftables\\\\
+	
+	\textbackslash{}begin\{gloss\}\\
+		PALABRA 1: Sinónimo. \% Se debe dejar una línea vacía entre palabras.\\
+		\\
+		PALABRA 2: Sinónimo.\\
+	\textbackslash{}end\{gloss\}\\\\
+
+	\textbackslash{}begin\{abstract\}\\
+		Este trabajo describe el funcionamiento de la plantilla upbthesis.cls ...\\
+	\textbackslash{}end\{abstract\}\\\\
+	
+	\textbackslash{}begin\{keywords\}\\
+	PALABRA CLAVE 1; PALABRA CLAVE 2.\\
+	\textbackslash{}end\{keywords\}\\
+	%\\
+  %\textbackslash{}mainmatter \\
+ 
+ \multicolumn{1}{|c|}{$\vdots$}\\
+ 
+ \textbackslash{}end\{document\}\\\hline
+
+\end{tabular}
+\end{center}
+
+Es importante tener en cuenta que en el glosario es necesario escribir cada una de las palabras que se van a definir con mayúscula sostenida, la definición se escribe después de dos puntos y seguido, y que cada una de las entradas del glosario deben separarse con una línea vacía.
+
+\section{Cuerpo del trabajo}
+%
+El inicio del cuerpo del trabajo y el final de los preliminares se declara con el comando {\tt \textbackslash{}mainmatter}. El efecto principal de este comando es que define el momento en que se empieza a mostrar la numeración de las páginas y, adicionalmente, el momento en que los elementos del texto empiezan a ser tenidos en cuenta dentro de la tabla de contenido.
+
+Para la introducción se puede usar el entorno {\tt introduction}. Sin embargo, \emph{para esta plantilla se sugiere que la introducción sea el primer capítulo}. Para definir la introducción como entorno el texto se delimita entre {\tt \textbackslash{}begin\{introduction\}} y {\tt \textbackslash{}end\{introduction\}}. Este entorno define un capítulo sin numeración que se incluye dentro de la tabla de contenido.
+
+Los capítulos se declaran usando el comando {\tt \textbackslash{}chapter\{\}}. Los capítulos son divisiones de nivel 1. Las divisiones de nivel 2, 3 y 4 se declaran usando los comandos {\tt \textbackslash{}section\{\}}, {\tt \textbackslash{}subsection\{\}}, {\tt \textbackslash{}subsubsection\{\}}. Estos comandos se usan para definir los títulos de nivel 1 hasta 4. Mayores niveles de indentación dentro de las secciones son posibles con el comando {\tt \textbackslash{}paragraph\{\}}. Los títulos de nivel 1 hasta 4 definidos se incluyen dentro de la tabla de contenido.
+%Los comandos {\tt \textbackslash{}chapter\{\}} y {\tt \textbackslash{}part\{\}} no están declarados dentro de la plantilla.
+
+Al igual que con la introducción, las conclusiones se definen usando el entorno {\tt conclusions} y se escriben entre {\tt \textbackslash{}begin\{conclusions\}} y {\tt \textbackslash{}end\{conclusions\}}. De igual modo, \emph{para esta plantilla se sugiere que las conclusiones sean un capítulo aparte}
+
+Un ejemplo del uso de los comandos mencionados se muestra a continuación:
+%
+\begin{center}\tt\footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+	\textbackslash{}begin\{document\}\\
+	\multicolumn{1}{|c|}{$\vdots$}\\
+	{\tt \textbackslash{}mainmatter}\\
+	\\
+	{\tt \textbackslash{}chapter\{Introducción\}} \\
+	La plantilla {\tt upbthesis.cls} está diseñada para la redacción de tesis y trabajos de grado en \textbackslash{}LaTeXe,...\\
+	\\
+	{\tt \textbackslash{}chapter\{Capítulo 1\}}\\
+	Texto.\\
+	{\tt \textbackslash{}section\{SECCIÓN 1.1.\}}\\
+	Texto.\\
+	{\tt \textbackslash{}section\{SECCIÓN 1.2.\}}\\
+	Texto.\\
+	{\tt \textbackslash{}subsection\{SECCIÓN 1.2.1.\}}\\
+	Texto.\\
+	{\tt \textbackslash{}subsection\{SECCIÓN 1.2.2.\}}\\
+	Texto.\\
+	{\tt \textbackslash{}chapter\{Capítulo 2\}}\\
+	Texto.\\
+	\multicolumn{1}{|c|}{$\vdots$}\\
+	\textbackslash{}chapter\{Conclusiones\}\\
+	Conclusión 1.\\
+	\\
+	Conclusión 2.\\
+	\multicolumn{1}{|c|}{$\vdots$}\\
+	\textbackslash{}end\{document\}\\\hline
+\end{tabular}
+\end{center}
+%
+\subsection{Bibliografía}
+%
+La bibliografía se puede definir usando el entorno {\tt thebibliography} o usando \mbox{BibTeX}~\cite{lamport1994}. (El uso de BibTeX no se explicará en este documento.) En el primer caso, usando {\tt thebibliography}, se cuenta con dos alternativas: usar numeración de citas tipo Vancouver, con números entre corchetes; o tipo Icontec, donde la bibliografía no está numerada y la citación se hace usando notas al pie. Para la citación tipo Vancouver se debe declarar la opción {\tt numcit} dentro de las opciones de {\tt \textbackslash{}documentclass}, por ejemplo
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}documentclass[numcit]\{upbthesis\}\\\hline
+\end{tabular}\,.
+\end{center}
+Para la citación tipo Icontec se debe declarar la opción {\tt icontec}, por ejemplo
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}documentclass[icontec]\{upbthesis\}\\\hline
+\end{tabular}\,.
+\end{center}
+Si no se declara ninguna de las opciones, la opción {\tt numcit} se asume por defecto.
+
+
+La bibliografía Icontec, usando el entorno {\tt thebibliography}, se define de la siguiente forma:
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{thebibliography\}\\
+\textbackslash{}bibitem\{etiqueta01\} APELLIDO1, Nombre1; APELLIDO2, Nombre2 y APELLIDO3, Nombre3. Título del artículo. \textbackslash{}underline\{En\}: Título Revista. Vol.$\sim$XX, No.$\sim$Z (Sep.$\sim$2011); p.$\sim$1251--1261. \\
+\textbackslash{}bibitem\{etiqueta02\} APELLIDO1, Nombre1 y APELLIDO2, Nombre2. Título Libro. Ciudad: Editorial, 2010. 208$\sim$p.\\
+\multicolumn{1}{|c|}{$\vdots$}\\
+\textbackslash{}end\{thebibliography\}\\\hline
+\end{tabular}\,.
+\end{center}
+
+
+La bibliografía Vancouver, usando el entorno {\tt thebibliography}, se define de forma similar al caso Icontec, pero en este caso se requiere de un argumento adicional que corresponde al número máximo esperado de referencias bibliográficas.
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{thebibliography\}\{99\}\\
+\textbackslash{}bibitem\{etiqueta01\} APELLIDO1, Nombre1; APELLIDO2, Nombre2 y APELLIDO3, Nombre3. Título del artículo. \textbackslash{}underline\{En\}: Título Revista. Vol.$\sim$XX, No.$\sim$Z (Sep.$\sim$2011); p.$\sim$1251--1261. \\
+\textbackslash{}bibitem\{etiqueta02\} APELLIDO1, Nombre1 y APELLIDO2, Nombre2. Título Libro. Ciudad: Editorial, 2010. 208$\sim$p.\\
+\multicolumn{1}{|c|}{$\vdots$}\\
+\textbackslash{}end\{thebibliography\}\\\hline
+\end{tabular}\,.
+\end{center}
+Adicionalmente, las citaciones dentro del texto se pueden hacer con el comando {\tt \textbackslash{}cite\{\}}, donde el argumento es la etiqueta de la entrada bibliográfica. Es decir, la citación en la fuente {\tt .tex} aparece así:
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+... como se indica en \textbackslash{}cite\{etiqueta01\}, la redacción de textos ...\\\hline
+\end{tabular}\,.
+\end{center}
+Esto produce el siguiente resultado en el texto:
+\begin{center}
+\begin{tabular}{|p{14cm}|}\hline
+... como se indica en [1], la redacción de textos ...\\\hline
+\end{tabular}\,.
+\end{center}
+
+%
+\chapter{Objetos flotantes: figuras y tablas}
+%
+Un objeto flotante es aquel cuya ubicación dentro de un texto es flexible, es decir, no necesariamente se ubica en el lugar exacto en el que se declara dentro de la fuente .tex. En un trabajo de grado los dos tipos de objetos flotantes declarados son las figuras y las tablas. Estos objetos flotantes están soportados por los entornos {\tt figure} y {\tt table}. Según esto, una figura se define usando:
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{figure\}\\
+\multicolumn{1}{|c|}{$\vdots$}\\
+\textbackslash{}end\{figure\}\\\hline
+\end{tabular}
+\end{center}
+%
+y una tabla se define usando:
+%
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{table\}\\
+\multicolumn{1}{|c|}{$\vdots$}\\
+\textbackslash{}end\{table\}\\\hline
+\end{tabular}\,.
+\end{center}
+%
+\section{Figuras}
+%
+La forma más simple para la inserción de gráficas es a través del uso del paquete {\tt graphicx}, el cual se inserta después de {\tt \textbackslash{}documentclass\{upbthesis\}}, de la siguiente forma
+%
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}usepackage\{graphicx\}\\\hline
+\end{tabular}\,.
+\end{center}
+%
+Este paquete permite la inserción de imágenes en formato .eps (PostScript encapsulado) cuando se compila en formato .dvi (usando latex.exe) e imágenes en formatos .pdf, .png y .jpg cuando se compila en formato .pdf (usando pdf\mbox{}latex.exe). La sintaxis para la inserción de una figura puede ser
+\begin{center}\tt
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{figure\}[h]\\
+\textbackslash{}caption\{Título de la figura\}\\
+	\textbackslash{}centering\\
+		\textbackslash{}includegraphics[width=10cm]\{imagen.pdf\}\\
+	\textbackslash{}label\{fig:imagen\}\\
+\textbackslash{}end\{figure\}\\\hline
+\end{tabular}\,.
+\end{center}
+Hay varios aspectos a tener en cuenta en la definición de la figura:
+\begin{itemize}
+\item El argumento opcional {\tt [h]} ({\it here}) indica que el objeto flotante se debe colocar en el mismo lugar en que se declara, otras opciones son {\tt t} ({\it top}), {\tt b} ({\it bottom}) y {\tt p} ({\it page of floats}). Es posible escoger combinaciones como {\tt [htb]} ó usar el símbolo de admiración {\tt !} para forzar el objeto a ubicarse en el lugar que se declara.
+\item El comando {\tt \textbackslash{}caption} se usa para definir el título de la figura y debe declararse en la parte superior, después de {\tt \textbackslash{}begin\{figure\}}. Esto hace que el título aparezca en la parte superior y alineado a la izquierda.
+\item El comando {\tt \textbackslash{}centering} hace que la figura se presente centrada.
+\item El comando {\tt \textbackslash{}includegraphics} inserta la imagen contenida en imagen.pdf. El argumento opcional entre corchetes genera modificaciones en la imagen, particularmente {\tt [width=10cm]} hace que el ancho de la figura sea de 10~cm.
+\item El comando {\tt \textbackslash{}label\{fig:imagen\}} genera la etiqueta con la cual se puede referenciar la figura en el texto. La referencia en el texto se declararía de la siguiente forma:
+
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{12cm}|}\hline
+ ... como se muestra en la Figura$\sim$\textbackslash{}ref\{fig:imagen\}, la tendencia de ...\\\hline
+\end{tabular}\,,
+\end{center}
+lo cual generaría lo siguiente en el texto: 
+\begin{center}
+\begin{tabular}{|p{12cm}|}\hline
+ ... como se muestra en la Figura 1, la tendencia de ...\\\hline
+\end{tabular}\,.
+\end{center}
+\end{itemize}
+%
+%
+\section{Tablas}
+%
+La elaboración de tablas es más complicada. Información detallada puede ser encontrada en \url{http://en.wikibooks.org/wiki/LaTeX/Tables}. Sin embargo,  un ejemplo de tabla se muestra a continuación
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}begin\{table\}[htb]\\
+\textbackslash{}caption\{Tabla ejemplo\}\\
+	\textbackslash{}centering\\
+		\textbackslash{}begin\{tabular\}\{l|cr\}\textbackslash{}hline\\
+			Columna 1	\&	Columna 2	\&	Columna 3 \textbackslash{}\textbackslash{}\textbackslash{}hline \textbackslash{}hline\\
+			12				\&	32				\&	15				\textbackslash{}\textbackslash{}\\
+			34				\&	45				\&	34				\textbackslash{}\textbackslash{}\\
+			15				\&	56				\&	76				\textbackslash{}\textbackslash{}\textbackslash{}hline\\
+		\textbackslash{}end\{tabular\}\\
+	\textbackslash{}label\{tab:TablaEjemplo\}\\
+\textbackslash{}end\{table\}\\\hline
+\end{tabular}\,.
+\end{center}
+El resultado se muestra en la Tabla~\ref{tab:TablaEjemplo}.
+\begin{table}[htb]
+\caption{Tabla ejemplo}
+	\centering
+		\begin{tabular}{l|cr}\hline
+			Columna 1	&	Columna 2	&	Columna 3 \\\hline \hline
+			12				&	32				&	15				\\
+			34				&	45				&	34				\\
+			15				&	56				&	76				\\\hline
+		\end{tabular}
+	\label{tab:TablaEjemplo}
+\end{table}
+El comportamiento de los comandos {\tt \textbackslash{}caption}, {\tt \textbackslash{}centering} y {\tt \textbackslash{}label\{tab:TablaEjemplo\}} es igual para las tablas y las figuras.
+
+
+
+\chapter{Ecuaciones}
+%
+Para la inclusión de objetos matemáticos dentro de un texto se recomienda incluir los paquetes de la American Mathematical Society (AMS) que incluyen fuentes y otros comandos útiles. Estos paquetes se declaran después de {\tt \textbackslash{}documentclass\{upbthesis\}} de la siguiente forma:
+\begin{center}\tt 
+\begin{tabular}{|p{14cm}|}\hline
+\textbackslash{}usepackage\{amsfonts\}\\
+\textbackslash{}usepackage\{amsmath\}\\\hline
+\end{tabular}\,.
+\end{center}
+
+Generalmente se usan tres métodos para la inserción de objetos matemáticos dentro del texto: ecuación en línea dentro del texto, ecuación en línea aparte sin numeración y ecuación en línea aparte con numeración. La ecuación en línea con el texto se escribe entre simbolos~{\tt \$}, por ejemplo
+\begin{center}\tt 
+\begin{tabular}{|p{14cm}|}\hline
+... en la expresión mostrada \$\textbackslash{}phi\$, \$\textbackslash{}theta\$ y \$\textbackslash{}psi\$ son los ángulos de Euler de alabeo, cabeceo y guiñada respectivamente ...
+\\\hline
+\end{tabular}
+\end{center}
+produce en el texto lo siguiente:
+\begin{center}
+\begin{tabular}{|p{14cm}|}\hline
+... en la expresión mostrada $\phi$, $\theta$ y $\psi$ son los ángulos de Euler de alabeo, cabeceo y guiñada respectivamente ...
+\\\hline
+\end{tabular}\,.
+\end{center}
+La ecuación en línea aparte se puede declarar entre símbolos~{\tt \$\$}, por ejemplo
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+... se puede encontrar el área bajo la curva a través de la integral \$\$A = \textbackslash{}int\_\{a\}\^{}\{b\}f(x)dx,\$\$ donde \$f(x)\$ se obtiene de ...
+\\\hline
+\end{tabular}
+\end{center}
+produce en el texto lo siguiente:
+\begin{center}
+\begin{tabular}{|p{14cm}|}\hline
+... se puede encontrar el área bajo la curva a través de la integral $$A = \int_{a}^{b}f(x)dx,$$ donde $f(x)$ se obtiene de ...
+\\\hline
+\end{tabular}\,.
+\end{center}
+En contraste, la ecuación en línea aparte se puede definir con el entorno {\tt equation}, por ejemplo
+
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+... se puede encontrar el área bajo la curva a través de la integral \\
+\textbackslash{}begin\{equation\}\\
+A = \textbackslash{}int\_\{a\}\^{}\{b\}f(x)dx,\\
+\textbackslash{}label\{eq:ecuacion01\}\\
+\textbackslash{}begin\{equation\}\\
+donde \$f(x)\$ se obtiene de ...
+\\\hline
+\end{tabular}
+\end{center}
+v
+\begin{center}
+\begin{tabular}{|p{14cm}|}\hline
+... se puede encontrar el área bajo la curva a través de la integral \\
+\begin{equation}
+A = \int_{a}^{b}f(x)dx,
+\label{eq:ecuacion01}
+\end{equation}
+donde $f(x)$ se obtiene de ...
+\\\hline
+\end{tabular}\,.
+\end{center}
+En este caso la ecuación se puede referenciar en el texto de la siguiente forma
+\begin{center}\tt \footnotesize
+\begin{tabular}{|p{14cm}|}\hline
+... como se muestra en \textbackslash{}eqref\{eq:ecuacion01\}, el cálculo del área ...
+\\\hline
+\end{tabular}
+\end{center}
+produce en el texto lo siguiente:
+\begin{center}
+\begin{tabular}{|p{14cm}|}\hline
+... como se muestra en \eqref{eq:ecuacion01}, el cálculo del área ...
+\\\hline
+\end{tabular}\,.
+\end{center}
+
+%
+\chapter{Conclusiones}
+La plantilla {\tt upbthesis.cls} permite la redacción de Tesis y Trabajos de Grado en \LaTeXe{} usando las normas de estilo experimentales para la Universidad Pontificia Bolivariana. Esta plantilla contiene las reglas de forma necesarias para que un usuario de \LaTeX{} redacte su Tesis o Trabajo de Grado con una excelente calidad tipográfica sin preocuparse por el estilo.
+
+Este documento presenta la primera versión de la plantilla. Ésta cumple con las condiciones mínimas para redacción completa de una Tesis o Trabajo de Grado. Sin embargo la plantilla se considera como un trabajo en progreso susceptible de mejorar en el tiempo.
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{upbthesis}
+%
+%\begin{thebibliography}{99}
+%\bibitem{apkarian1995} APKARIAN, Pierre; GAHINET, Pascal and BECKER, Greg. Self-scheduled ${\cal H}_\infty$ control of linear parameter-varying systems: a design example. \underline{In}: Automatica. Vol. 31, No. 9 (Sep. 1995); p. 1251 - 1261.
+%\bibitem{astrom2008} ÅSTRÖM, Karl and MURRAY, Richard. Feedback systems: an introduction for scientists and engineers. Princeton, NJ: Princeton University Press, 2008. p. 27.
+%\bibitem{gutierrez2004} GUTIERREZ, Luis Benigno. Adaptive mode transition control architecture with an application to unmanned aerial vehicles. Atlanta, GA; 2004. Thesis (PhD in Electrical and Computer Engineering). Georgia Institute of Technology. School of Electrical and Computer Engineering.
+%\end{thebibliography}
+
+%
+\end{document}
