@@ -1,4 +1,4 @@
-![Logo UPB](./img/logoUPB.png =1210x)
+![Logo UPB](./img/logoUPB.png)
 
 # LaTeX templates for writing theses at Universidad Pontificia Bolivariana
 
