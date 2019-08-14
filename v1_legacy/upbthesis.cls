@@ -376,8 +376,9 @@
 							{\bf \today}
 							\par
 							{\bf \@author}
-							``Declaro que esta tesis (o trabajo de grado) no ha sido presentada para optar a un título, ya sea en igual forma o con variaciones, en ésta o cualquier otra universidad''. Art.~82 Régimen Discente de Formación Avanzada, Universidad Pontificia Bolivariana.\par
-							Firma Autor:\\
+							\par
+							``Declaro que este trabajo de grado no ha sido presentado con anterioridad para optar a un título, ya sea en igual forma o con variaciones, en ésta o en cualquiera otra universidad''. Art. 92, parágrafo, Régimen Estudiantil de Formación Avanzada.\par
+							Firma:\\
 							\rule[-10pt]{7.5cm}{1pt}
 							}
 % Dedication environment
