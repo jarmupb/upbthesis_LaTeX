@@ -619,12 +619,12 @@
 %\fi
 % Dedication environment
 \newcommand\originality{\if@openright\cleardoublepage\else\clearpage\fi
-               \section*{Declaración de originalidad}
+               \section*{Declaraci\'on de originalidad}
 							{\bf \today}
 							\par
 							{\bf \@author}
 							\par
-							``Declaro que este trabajo de grado no ha sido presentado con anterioridad para optar a un título, ya sea en igual forma o con variaciones, en ésta o en cualquiera otra universidad''. Art. 92, parágrafo, Régimen Estudiantil de Formación Avanzada.\par
+							``Declaro que este trabajo de grado no ha sido presentado con anterioridad para optar a un t\'itulo, ya sea en igual forma o con variaciones, en \'esta o en cualquiera otra universidad''. Art.~92, par\'agrafo, R\'egimen Estudiantil de Formaci\'on Avanzada.\par
 							Firma:\\
 							\rule[-10pt]{7.5cm}{1pt}
 							}
