@@ -8,5 +8,5 @@ There are two main versions:
 
 You have the following possibilities:
 - To download the .cls file directly [click here](https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis.cls).
-- To explore the repository with all the files [click here](https://github.com/jarmupb/upbthesis_LaTeX/tree/master/v2).
+- To explore the repository that contains the files [click here](https://github.com/jarmupb/upbthesis_LaTeX/tree/master/v2).
 - To see the documentation [click here](https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis_manual.pdf).
