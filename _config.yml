@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: UPB LaTeX template
+title: UPB LaTeX class
 logo: /img/logoUPB_3.png
-description: This repository contains LaTeX classes (.cls) for writing your thesis at UPB
+description: LaTeX class (.cls) for writing your thesis at UPB
+show_downloads: true
