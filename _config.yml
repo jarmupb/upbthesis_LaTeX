@@ -2,4 +2,4 @@ theme: jekyll-theme-minimal
 title: UPB LaTeX class
 logo: /img/logoUPB_3.png
 description: LaTeX class (.cls) for writing your thesis at UPB
-show_downloads: true
+page-col: "#FFFFFF"
