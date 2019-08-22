@@ -7,6 +7,6 @@ There are two main versions:
 - [v2](https://github.com/jarmupb/upbthesis_LaTeX/tree/master/v2): this .cls organizes the thesis by chapters and, optionally, by parts. This one is more like the standard book template. I'll be working on this template more.
 
 You have the following possibilities:
-- To download the .cls file directly <a href="https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis.cls" download="https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis.cls">click here</a>.
+- To download the .cls file directly <a href="https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis.cls" download>click here</a>.
 - To explore the repository that contains the files [click here](https://github.com/jarmupb/upbthesis_LaTeX/tree/master/v2).
 - To see the documentation [click here](https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis_manual.pdf).
