@@ -1,12 +1,4 @@
-title: UPB LaTeX template
-logo: [./img/logoUPB_3.png]
-description: This repository contains LaTeX classes (.cls) for writing your thesis at UPB
-
----
-
 # LaTeX templates for writing theses at Universidad Pontificia Bolivariana
-
-![Logo UPB](./img/logoUPB.png)
 
 This repository contains LaTeX classes (.cls) for writing your thesis at UPB. The file you require is **upbthesis.cls**
 
