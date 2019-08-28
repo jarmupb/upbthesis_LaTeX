@@ -1,6 +1,7 @@
-# LaTeX templates for writing theses at Universidad Pontificia Bolivariana
+# LaTeX template for writing theses at Universidad Pontificia Bolivariana
 
-**upbthesis.cls** is a LaTeX class for writing your thesis at UPB. *Knowing how to write in LaTeX is a prerequisite*.
+**upbthesis.cls** is a LaTeX class for writing your thesis at UPB.  
+*Knowing how to write in LaTeX is a prerequisite*.
 
 You have the following possibilities:
 - To download a .zip bundle with all the relevant files [click here](https://github.com/jarmupb/upbthesis_LaTeX/blob/master/v2/upbthesis.zip).
