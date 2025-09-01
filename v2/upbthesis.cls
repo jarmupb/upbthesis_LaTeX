@@ -1,28 +1,28 @@
 % upbthesis.cls
 %
 % Creado por:
-% Juan Alberto RamÌrez MacÌas
-% Facultad de IngenierÌa Mec·nica
-% Grupo de Autom·tica y DiseÒo A+D
+% Juan Alberto Ram√≠rez Mac√≠as
+% Facultad de Ingenier√≠a Mec√°nica
+% Grupo de Autom√°tica y Dise√±o A+D
 % Universidad Pontificia Bolivariana
 % email: juan.ramirez@upb.edu.co
 %
 % La Universidad Pontificia Bolivariana es propietaria de los derechos de autor de esta plantilla - 2011
 % 
-% v0.0 - versiÛn inicial con elementos b·sicos y funcionales para crear documentos. Se usa bibliografÌa con n˙mero entre corchetes.
-% v0.1 - posibilidad para crear bibliografÌas ICONTEC, usando la opciÛn icontec Û con n˙mero entre corchetes, usando la opciÛn numcit (por defecto).
-% v0.2 - correcciÛn de error en bibliografÌa que se generaba usando el paquete hyperref.
-% v0.3 - inclusiÛn del comando \appendix para la generaciÛn de anexos y correcciÛn en la p·gina de aprobaciÛn.
-% v1.0 - primera versiÛn oficial de la plantilla
-% v1.1 - correcciÛn de espacio antes de \paragraph
-% v1.2 - correcciÛn de hipervÌculos de introducciÛn, conclusiones, recomendaciones y bibliografÌa.
-% v1.3 - nueva versiÛn de m·rgenes
-% v1.4 - environments de abstract y keywords en inglÈs y espaÒol y declaraciÛn de originalidad
-% v1.5 - se programa la opciÛn english para la redacciÛn de documentos en inglÈs
-% v1.6 - se actualiza P·g en tablas de contenido, versiÛn en inglÈs.
+% v0.0 - versi√≥n inicial con elementos b√°sicos y funcionales para crear documentos. Se usa bibliograf√≠a con n√∫mero entre corchetes.
+% v0.1 - posibilidad para crear bibliograf√≠as ICONTEC, usando la opci√≥n icontec √≥ con n√∫mero entre corchetes, usando la opci√≥n numcit (por defecto).
+% v0.2 - correcci√≥n de error en bibliograf√≠a que se generaba usando el paquete hyperref.
+% v0.3 - inclusi√≥n del comando \appendix para la generaci√≥n de anexos y correcci√≥n en la p√°gina de aprobaci√≥n.
+% v1.0 - primera versi√≥n oficial de la plantilla
+% v1.1 - correcci√≥n de espacio antes de \paragraph
+% v1.2 - correcci√≥n de hiperv√≠culos de introducci√≥n, conclusiones, recomendaciones y bibliograf√≠a.
+% v1.3 - nueva versi√≥n de m√°rgenes
+% v1.4 - environments de abstract y keywords en ingl√©s y espa√±ol y declaraci√≥n de originalidad
+% v1.5 - se programa la opci√≥n english para la redacci√≥n de documentos en ingl√©s
+% v1.6 - se actualiza P√°g en tablas de contenido, versi√≥n en ingl√©s.
 %
-% v2.0 - nueva version, m·s parecida a "book"
-% v2.1 - actualizaciÛn de la declaraciÛn de originalidad
+% v2.0 - nueva version, m√°s parecida a "book"
+% v2.1 - actualizaci√≥n de la declaraci√≥n de originalidad
 %
 % Bibliografia:
 % * book.cls
@@ -569,7 +569,7 @@
 % Approvalpage
 \newcommand\approvalpage{\if@openright\cleardoublepage\else\clearpage\fi
 												\twocolumn\null\vfill\@address, \today \newpage
-												Nota de aceptaciÛn\par
+												Nota de aceptaci√≥n\par
 												\vspace{48pt}
 												\null\hrulefill\null\par
 												\vspace{24pt}
@@ -594,7 +594,7 @@
 %\if@english
 %\renewcommand\approvalpage{\if@openright\cleardoublepage\else\clearpage\fi
 												%\twocolumn\null\vfill\@address, \today \newpage
-												%Nota de aceptaciÛn\par
+												%Nota de aceptaci√≥n\par
 												%\vspace{48pt}
 												%\null\hrulefill\null\par
 												%\vspace{24pt}
@@ -624,7 +624,7 @@
 							\par
 							{\bf \@author}
 							\par
-							``Declaro que este trabajo de grado no ha sido presentado con anterioridad para optar a un t\'itulo, ya sea en igual forma o con variaciones, en \'esta o en cualquiera otra universidad''. Art.~92, par\'agrafo, R\'egimen Estudiantil de Formaci\'on Avanzada.\par
+							``El contenido de este documento no ha sido presentado con anterioridad para optar a un t\'itulo, ya sea en igual forma o con variaciones, en esta o en cualquiera otra universidad.''.\par
 							Firma:\\
 							\rule[-10pt]{7.5cm}{1pt}
 							}
@@ -659,8 +659,8 @@
                {}
 % Introduction
 \newenvironment{introduction}
-               {\phantomsection\addcontentsline{toc}{section}{\if@english \protect INTRODUCTION \else \protect INTRODUCCI”N \fi} 
-							 \section*{\if@english Introduction \else IntroducciÛn \fi}}
+               {\phantomsection\addcontentsline{toc}{section}{\if@english \protect INTRODUCTION \else \protect INTRODUCCI√ìN \fi} 
+							 \section*{\if@english Introduction \else Introducci√≥n \fi}}
                {}
 % Conclusions
 \newenvironment{conclusions}
@@ -793,7 +793,7 @@
 % The bibliography numcit
 \newenvironment{thebibliography}[1]
      {\chapter*{\bibname}
-     \phantomsection\addcontentsline{toc}{chapter}{\if@english References \else BIBLIOGRAFÕA \fi}%
+     \phantomsection\addcontentsline{toc}{chapter}{\if@english References \else BIBLIOGRAF√çA \fi}%
       \list{\@biblabel{\@arabic\c@enumiv}}
            {\leftmargin 0pt
             \parsep 6pt
@@ -816,7 +816,7 @@
 % The bibliography icontec
 \newenvironment{thebibliography}
      {\chapter*{\bibname}
-     \phantomsection\addcontentsline{toc}{chapter}{\if@english References \else BIBLIOGRAFÕA \fi }%\MakeUppercase{\bibname}
+     \phantomsection\addcontentsline{toc}{chapter}{\if@english References \else BIBLIOGRAF√çA \fi }%\MakeUppercase{\bibname}
       \list{}
            {\leftmargin 0pt
             \parsep 6pt
@@ -840,11 +840,11 @@
 \newcommand\contentsname{Contenido}
 \newcommand\listfigurename{Lista de Figuras}
 \newcommand\listtablename{Lista de Tablas}
-\newcommand\bibname{BibliografÌa}
+\newcommand\bibname{Bibliograf√≠a}
 \newcommand\indexname{Glosario}
 \newcommand\figurename{Figura}
 \newcommand\tablename{Tabla}
-\newcommand\appendixname{ApÈndice}
+\newcommand\appendixname{Ap√©ndice}
 \def\today{\ifcase\month\or
   Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or
   Julio\or Agosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi
