@@ -23,6 +23,7 @@
 %
 % v2.0 - nueva version, más parecida a "book"
 % v2.1 - actualización de la declaración de originalidad
+% v2.2 - nueva actualización de la declaración de originalidad según reglamento estudiantil de posgrado más reciente
 %
 % Bibliografia:
 % * book.cls
@@ -31,7 +32,7 @@
 % * http://en.wikibooks.org/wiki/LaTeX
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{upbthesis}[2018/05/24 v2.0 UPB LaTeX Thesis class]
+\ProvidesClass{upbthesis}[2018/05/24 v2.2 UPB LaTeX Thesis class]
 %\newcommand\@ptsize{}
 %\newif\if@restonecol
 %\newif\if@titlepage
@@ -625,8 +626,8 @@
 							{\bf \@author}
 							\par
 							``El contenido de este documento no ha sido presentado con anterioridad para optar a un t\'itulo, ya sea en igual forma o con variaciones, en esta o en cualquiera otra universidad.''.\par
-							Firma:\\
-							\rule[-10pt]{7.5cm}{1pt}
+							%Firma:\\
+							%\rule[-10pt]{7.5cm}{1pt}
 							}
 % Dedication environment
 \newenvironment{dedication}
